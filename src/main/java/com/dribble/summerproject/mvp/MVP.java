@@ -1,4 +1,4 @@
-package com.dribble.summerproject;
+package com.dribble.summerproject.mvp;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 @Entity
 public class MVP {
     @Id
-    private int mwaka;
+    private int date;
     private String name;
     private String imageURL;
 
@@ -14,8 +14,8 @@ public class MVP {
         // default constructor
     }
 
-    public MVP(int mwaka, String name, String imageURL) {
-        this.mwaka = mwaka;
+    public MVP(int date, String name, String imageURL) {
+        this.date = date;
         this.name = name;
         this.imageURL = imageURL;
     }
@@ -26,5 +26,9 @@ public class MVP {
 
     public String getName() {
         return name;
+    }
+
+    public int getDate() {
+        return date;
     }
 }
